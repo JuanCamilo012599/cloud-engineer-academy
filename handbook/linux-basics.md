@@ -1,9 +1,3 @@
-Thought for a couple of seconds
-
-Absolutely — from now on, we can keep the Handbook and Journal in English. That is better for your future GitHub, resume, LinkedIn, and technical interviews.
-
-Use this for the Handbook:
-
 # Linux Basics
 
 ## Commands Learned
@@ -87,3 +81,52 @@ Useful commands:
 
 pwd
 ls
+
+## File Commands
+
+### touch
+Creates a new empty file.
+
+Example: touch notes.txt
+
+### cat
+displays the content of a file in the terminal.
+
+Example: cat notes.txt
+
+### echo
+Prints text to the terminal. It can also write text into a file.
+
+Example: echo "Hello Linux" > notes.txt
+
+### >
+Writes outpot into a file and overwrites the previous content.
+
+### >>
+Adds outpot to the end of a file without deleting the previous content.
+
+### cp
+Copies a file.
+
+Example: cp notes.txt notes-backup.txt
+
+### mv
+Moves or renames a file.
+
+Example: mv notes-backup.txt backup-notes.txt
+
+### rm
+Deletes a file
+
+Example: rm delete-me.txt
+Important: rm can permanently delete files, so I should use it carefully
+
+### nano
+A terminal-based text editor.
+
+Save in nano: 
+Ctrl + O
+Enter
+
+Exit nano:
+Ctrl + X
