@@ -130,3 +130,24 @@ Enter
 
 Exit nano:
 Ctrl + X
+
+## Git Notes From Day 2
+
+### git add .
+Stages all changes inside the current repository.
+
+Example: git add .
+
+### git add ..
+Tries to stage the parent directory.
+
+This failed because the parent directory was outside my Git repository.
+
+### git commit -am
+Stages and commits changes only for files that Git is already tracking.
+
+Important:
+
+git commit -am does not add brand-new files.
+
+For new files, I need to use git add firts.
