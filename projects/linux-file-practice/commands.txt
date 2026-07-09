@@ -1,0 +1,7 @@
+Linux file commands learned today:
+
+touch - create an empty file
+cat - read a file
+cp - copy a file
+mv - move or rename a file
+rm - delete a file

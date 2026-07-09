@@ -1,0 +1,2 @@
+today i am learning how to work with files in Linux.
+This is my second line.
