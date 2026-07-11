@@ -1,1 +1,1 @@
-Day 2 summary: I practice creating, reading, copying, renaming, and deleting files in Linux
+Day 2 summary: I practiced creating, reading, copying, renaming, and deleting files in Linux
