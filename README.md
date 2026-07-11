@@ -16,7 +16,7 @@ This repository documents my journey to become a Cloud Engineer.
 
 ## Study Schedule
 
-I study 2 to 3 hours per day (sometimes more9999), Monday through Saturday. 
+I study 2 to 3 hours per day (sometimes more), Monday through Saturday. 
 
 ## Current Progress
 
