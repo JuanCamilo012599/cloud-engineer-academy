@@ -151,3 +151,57 @@ Important:
 git commit -am does not add brand-new files.
 
 For new files, I need to use git add firts.
+
+## Git Fundamentals
+
+### git status
+Shows the current state of the repository.
+
+It tells me:
+- What files changed
+- What files are staged
+- What files are untracked
+- Whether the working tree is clean
+
+### git diff
+Shows the exact changes made before the staging.
+
+### git diff --staged
+Shows the exact changes that are staged and ready to be committed.
+
+### git add
+Stages files for the next commit.
+
+Example: git add README.md
+
+### git add .
+Stages all changes inside the current repository.
+
+### git commit -m
+Creates a saved checkpoint with a message.
+
+Example: git commit -m "add academy readme"
+
+### git log --oneline --graph
+Shows commit history in a short visual format.
+
+### git restore
+Discard unwanted local changes and returns a file to the last committed version.
+
+Example: git restore README.md
+
+### .gitignore
+Tells Git which files or patterns to ignore.
+
+Example:
+
+*.log
+.env
+
+Before comitting, I should review my changes with:
+
+git status
+git diff
+git diff --staged
+
+This helps prevent bad commits and accidental mistakes.
