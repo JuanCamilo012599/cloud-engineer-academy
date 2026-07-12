@@ -79,14 +79,37 @@ Handbook:
 
 ---
 
+### Day 004 - GitHub Connection
+
+Status: Completed
+
+Main topics:
+- Local repository vs remote repository
+- GitHub repository setup
+- SSH key generation
+- SSH authentication with GitHub
+- git remote -v
+- git remote set-url origin
+- git push -u origin main
+- origin/main
+
+Journal:
+- journal/day-004.md
+
+Handbook:
+- handbook/linux-basics.md
+
+Remote repository:
+- github.com/JuanCamilo012599/cloud-engineer-academy
+
 ## Current Next Class
 
-Day 004 - GitHub Connection
+Day 005 - GitHub Workflow and Sync
 
 Topics:
-- local repository vs remote repository
-- git remote
-- origin
 - git push
 - git pull
-- connecting local Git to GitHub
+- origin/main
+- syncing local and remote changes
+- avoiding conflicts
+- basic GitHub workflow

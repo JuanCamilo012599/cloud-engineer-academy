@@ -205,3 +205,74 @@ git diff
 git diff --staged
 
 This helps prevent bad commits and accidental mistakes.
+
+## GitHub Connection
+
+### Local Repository
+A local repository is the Git project stored on my computer.
+
+Example:
+/home/juan/cloud-engineer-academy
+
+### Remote Repository
+A remote repository is the Git project stored on my computer.
+
+Example:
+github.com/JuanCamilo012599/cloud-engineer-academy
+
+### origin
+origin is the default name Git uses for the remote repository.
+
+### git remote -v
+Shows the remote repositories connected to my local project.
+
+Example:
+git remote -v
+
+### git remote add origin
+Connects a local repository to a remote repository for the first time.
+
+Example:
+git remote add origin git@github.com:username/repo.git
+
+### git remote set-url origin
+Changes the URL of an existing remote
+
+I used this when my origin was set to HTTPS and I wanted to switch it to SSH
+
+Example:
+git remote set-url origin git@github.com:JuanCamilo012599/cloud-engineer-academy.git
+
+### SSH Authentication
+SSH allows my computer to authenticate with GitHub using a key pair.
+
+Private key: id_ed25519
+
+Public key: id_ed25519.pub
+
+Important:
+
+The private key should never be shared.
+The public key is safe to add to GitHub.
+
+### ssh -T git@github.com
+Test if my SSH connection on GitHub works.
+
+### git push -u origin main
+Pushes my local main branch to GitHub and sets it to track origin/main
+
+### origin/main
+origin/main represents the main branch that lives on GitHub
+
+## GitHub Lesson
+
+A professional Git workflow is:
+
+1. Make changes locally
+2. Review changes with git status and git diff
+3. Commit changes locally
+4. Push commits to GitHub
+
+After the first push, I can usually use:
+
+git push
