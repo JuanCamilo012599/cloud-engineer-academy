@@ -23,3 +23,5 @@ I study 2 to 3 hours per day (sometimes more), Monday through Saturday.
 Day 1: Linux setup and navigation
 Day 2: Working with files in Linux
 Day 3: Git fundamentals
+Day 4: GitHub connection
+Day 5: GitHub workflow and sync
