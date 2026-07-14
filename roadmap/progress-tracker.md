@@ -1,6 +1,8 @@
 # Cloud Engineer Academy - Progress Tracker
 
 This file is the source of truth for my Cloud Engineer Academy progress.
+See `curriculum-phases.md` for the full phase-by-phase curriculum and
+`../CLAUDE.md` for mentor/teaching instructions.
 
 ## Completed Classes
 
@@ -24,7 +26,7 @@ Journal:
 - journal/day-001.md
 
 Handbook:
-- handbook/linux-basics.md
+- handbook/linux.md
 
 ---
 
@@ -48,7 +50,7 @@ Journal:
 - Added as "Day 2 Update" inside journal/day-001.md
 
 Handbook:
-- handbook/linux-basics.md
+- handbook/linux.md
 
 Project:
 - projects/linux-file-practice
@@ -75,7 +77,7 @@ Journal:
 - Pending
 
 Handbook:
-- handbook/linux-basics.md
+- handbook/git.md
 
 ---
 
@@ -97,7 +99,7 @@ Journal:
 - journal/day-004.md
 
 Handbook:
-- handbook/linux-basics.md
+- handbook/git.md
 
 Remote repository:
 - github.com/JuanCamilo012599/cloud-engineer-academy
@@ -118,7 +120,7 @@ Journal:
 - journal/day-005.md
 
 Handbook:
-- handbook/linux-basics.md
+- handbook/git.md
 
 ## Current Next Class
 
