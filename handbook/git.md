@@ -198,3 +198,41 @@ git add .
 git diff --staged
 git commit -m "clear message"
 git push
+
+## Fetch vs Pull, and Handling Diverged Branches
+
+### git fetch
+downloads new commits/branch info from the remote and updates your local copy of the remote-tracking branch 
+Example: 
+`origin/main` 
+It does NOT touch your own local branch or working directory. Fully safe, no merge.
+
+### git pull 
+runs `git fetch`, then tries to integrate those changes into your current local branch (merge or rebase, depending on config/flags)
+
+Status meanings (`git status` after a fetch):
+
+- **ahead**: your local branch has commits `origin/main` doesn't have yet.
+
+- **behind**: `origin/main` has commits your local branch doesn't have yet — usually a clean fast-forward.
+
+- **diverged**: both sides have commits the other doesn't have. This is about commit history shape only, decided before any merge is attempted.
+
+- **Merge conflict**: happens when git tries to merge diverged histories and finds the same lines changed differently on both sides — it can't auto-pick, so it stops and asks you to.
+
+Resolving a conflict:
+
+1. `git status` — shows conflicted files as "both modified"
+
+2. Open the file, find the markers:
+`<<<<<<< HEAD` (your local version)
+`=======` (divider) /
+`>>>>>>> <commit-hash>` (incoming version)
+
+3. Edit to the final content you want, delete all three marker lines
+
+4. `git add <file>` — marks it resolved
+
+5. `git commit` — completes the merge (opens editor with an auto-generated merge message)
+
+6. `git push`.

@@ -7,9 +7,12 @@ See `curriculum-phases.md` for the full phase-by-phase curriculum and
 Note: on 2026-07-14 the learning system was restructured — mentor instructions
 moved into `../CLAUDE.md`, the future curriculum moved into
 `curriculum-phases.md`, and the handbook was split by topic. See
-`../journal/day-006.md` for details. That journal entry was drafted with
-heavy AI assistance and not independently explained back — flagged for a
-quick spaced-review check-in (verbal, not written) at a later session.
+`../journal/day-006.md` for details. That journal entry, plus the "Fetch vs
+Pull, and Handling Diverged Branches" section added to `handbook/git.md` on
+the same day, were both drafted by the AI and transcribed rather than
+independently written — flagged for a quick spaced-review check-in (verbal,
+not written) at a later session, to confirm the fetch/pull/diverged/conflict
+concepts actually stuck.
 
 ## Completed Classes
 
@@ -111,6 +114,8 @@ Handbook:
 Remote repository:
 - github.com/JuanCamilo012599/cloud-engineer-academy
 
+---
+
 ### Day 005 - GitHub Workflow and Sync
 
 Status: Completed
@@ -129,12 +134,42 @@ Journal:
 Handbook:
 - handbook/git.md
 
+---
+
+### Day 006 - Pulling Remote Changes and Merge Conflicts
+
+Status: Completed
+
+Main topics:
+- Editing files directly on GitHub.com
+- git fetch vs git pull
+- Reading ahead / behind / diverged in git status
+- Fast-forward pull
+- Forcing a diverged history on purpose
+- git pull --no-rebase (merge vs rebase vs ff-only)
+- Reading and resolving conflict markers
+- Completing a merge commit
+- Mistake: edited locally instead of on GitHub, fixed with git restore
+
+Assessment:
+- Fetch/pull, ahead/behind/diverged, live conflict resolution: Practiced
+- Handbook and journal writeups for this day: AI-drafted, needs review
+
+Journal:
+- journal/day-006.md
+
+Handbook:
+- handbook/git.md ("Fetch vs Pull, and Handling Diverged Branches")
+
+---
+
 ## Current Next Class
 
-Day 006 - Pulling Remote Changes
+Day 007 - Branching in Git
 
 Topics:
-- editing files on GitHub
-- pulling remote commits locally
-- reading behind/ahead messages
-- avoiding sync problems
+- git branch (create, list, delete)
+- git switch / git checkout for moving between branches
+- why branches exist (isolating work before merging into main)
+- merging a branch into main, including a case with no conflicts
+- deleting a merged branch locally and on GitHub
