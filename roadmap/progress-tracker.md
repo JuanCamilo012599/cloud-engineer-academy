@@ -4,6 +4,13 @@ This file is the source of truth for my Cloud Engineer Academy progress.
 See `curriculum-phases.md` for the full phase-by-phase curriculum and
 `../CLAUDE.md` for mentor/teaching instructions.
 
+Note: on 2026-07-14 the learning system was restructured — mentor instructions
+moved into `../CLAUDE.md`, the future curriculum moved into
+`curriculum-phases.md`, and the handbook was split by topic. See
+`../journal/day-006.md` for details. That journal entry was drafted with
+heavy AI assistance and not independently explained back — flagged for a
+quick spaced-review check-in (verbal, not written) at a later session.
+
 ## Completed Classes
 
 ### Day 001 - Linux Setup and Navigation
