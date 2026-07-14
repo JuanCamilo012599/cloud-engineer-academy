@@ -130,3 +130,5 @@ Enter
 
 Exit nano:
 Ctrl + X
+
+test for day 006
