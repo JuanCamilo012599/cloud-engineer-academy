@@ -131,4 +131,4 @@ Enter
 Exit nano:
 Ctrl + X
 
-test for day 006
+test for day 006 - edited on GitHub
