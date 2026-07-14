@@ -100,10 +100,10 @@ Prints text to the terminal. It can also write text into a file.
 Example: echo "Hello Linux" > notes.txt
 
 ### >
-Writes outpot into a file and overwrites the previous content.
+Writes output into a file and overwrites the previous content.
 
 ### >>
-Adds outpot to the end of a file without deleting the previous content.
+Adds output to the end of a file without deleting the previous content.
 
 ### cp
 Copies a file.
@@ -150,7 +150,7 @@ Important:
 
 git commit -am does not add brand-new files.
 
-For new files, I need to use git add firts.
+For new files, I need to use git add first.
 
 ## Git Fundamentals
 
@@ -215,7 +215,7 @@ Example:
 /home/juan/cloud-engineer-academy
 
 ### Remote Repository
-A remote repository is the Git project stored on my computer.
+A remote repository is the Git project stored on GitHub.
 
 Example:
 github.com/JuanCamilo012599/cloud-engineer-academy
