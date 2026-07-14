@@ -276,3 +276,56 @@ A professional Git workflow is:
 After the first push, I can usually use:
 
 git push
+
+## GitHub Workflow and Sync
+
+### git pull
+Downloads new commits from the remote repository and updates my local branch.
+
+I should usually run this before starting work.
+
+Example:
+
+git pull
+
+### git push
+Uploads my local commits to the remote repository on GitHub
+
+Example:
+git push
+
+### Local branch
+The branch on my computer
+
+Example:
+
+main
+
+### Remote branch
+The branch on GitHub
+
+Example: origin/main
+
+### Up to date
+When Git says my branch is up to date with origin/main, it means my local branch and GitHub are both synchronized
+
+### Ahead of origin/main
+When Git says my branch is ahead of origin/main, it means I have local commits that have not been pushed to GitHub yet
+
+### Behind origin/main
+When Git says my branch is behind origin/main, it means GitHub has commits that my local machine does not have yet
+
+### Sync Workflow
+
+Before working:
+
+git pull
+
+After working:
+
+git status
+git diff
+git add .
+git diff --staged
+git commit -m "clear message"
+git push

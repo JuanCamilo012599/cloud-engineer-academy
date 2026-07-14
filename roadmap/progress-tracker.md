@@ -102,14 +102,30 @@ Handbook:
 Remote repository:
 - github.com/JuanCamilo012599/cloud-engineer-academy
 
+### Day 005 - GitHub Workflow and Sync
+
+Status: Completed
+
+Main topics:
+- git pull
+- git push
+- origin/main
+- local branch vs remote branch
+- syncing local and remote repositories
+- clean GitHub workflow
+
+Journal:
+- journal/day-005.md
+
+Handbook:
+- handbook/linux-basics.md
+
 ## Current Next Class
 
-Day 005 - GitHub Workflow and Sync
+Day 006 - Pulling Remote Changes
 
 Topics:
-- git push
-- git pull
-- origin/main
-- syncing local and remote changes
-- avoiding conflicts
-- basic GitHub workflow
+- editing files on GitHub
+- pulling remote commits locally
+- reading behind/ahead messages
+- avoiding sync problems
