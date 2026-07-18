@@ -202,13 +202,13 @@ git push
 ## Fetch vs Pull, and Handling Diverged Branches
 
 ### git fetch
-downloads new commits/branch info from the remote and updates your local copy of the remote-tracking branch 
+Downloads new commits/branch info from the remote and updates your local copy of the remote-tracking branch 
 Example: 
 `origin/main` 
 It does NOT touch your own local branch or working directory. Fully safe, no merge.
 
 ### git pull 
-runs `git fetch`, then tries to integrate those changes into your current local branch (merge or rebase, depending on config/flags)
+Runs `git fetch`, then tries to integrate those changes into your current local branch (merge or rebase, depending on config/flags)
 
 Status meanings (`git status` after a fetch):
 
@@ -236,3 +236,38 @@ Resolving a conflict:
 5. `git commit` — completes the merge (opens editor with an auto-generated merge message)
 
 6. `git push`.
+
+## Branching in Git
+
+### git branch
+Lists every local branch, with `*` marking whichever one I'm currently working on
+
+Example: where `HEAD` points
+
+### git branch <name>
+Creates a new branch pointing at my current commit, but does not move me onto it. I stay on whatever branch i'm currently at
+
+### git switch <name>
+moves `HEAD` onto the name branch, so my working directory now reflects that branch's files/history. Note:
+(git checkout <name> does the same job — it's the older command, but it's overloaded with other unrelated uses, so switch is the newer, purpose-built one)
+
+
+`Why branches exist???`
+
+So I can isolate in-progress work from `main.`. If I commit unfinished/broken work directly to `main`, anyone who pulls gets that broken code and is blocked until it's fixed - WORSE if `main` auto-deploys to production. A `branch` is a private space to commit freely until the work is ready to merge in
+
+
+### git merge <branch>
+Brings another branch's commits into my current branch. If my current branch (e.g. `main`) hasn't moved since the other branch was created, Git just slides the pointer forward -- That's called a fast-forward merge, no new commit needed. If both branches have separate commits since they split (diverged), Git creates an actual merge commit with two parents instead (Like the one from day-006)
+
+### git branch -d <name>
+Deletes a local branch, but only if it's already fully merged (safe default; refuses otherwise)
+
+### git branch -D <name>
+Force-deletes regardless of merge status; can strand commits that are only reachable from that branch (effectively lose them unless you still remember the commit hash)
+
+### git push -u origin <branch>
+Pushes a branch to GitHub for the first time, and the `-u` sets up "tracking" so future plain `git push/git pull` on that branch know where to sync without needing the full `origin <branch>` spelled out
+
+### git push origin --delete <branch>
+Deletes a branch on GitHub. This is separate from `git branch -d` -- deleting locally does not delete it on GitHub, and vice versa; each side has to be told separately
