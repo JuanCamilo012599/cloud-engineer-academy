@@ -252,7 +252,7 @@ moves `HEAD` onto the name branch, so my working directory now reflects that bra
 (git checkout <name> does the same job — it's the older command, but it's overloaded with other unrelated uses, so switch is the newer, purpose-built one)
 
 
-`Why branches exist???`
+### Why branches exist???
 
 So I can isolate in-progress work from `main.`. If I commit unfinished/broken work directly to `main`, anyone who pulls gets that broken code and is blocked until it's fixed - WORSE if `main` auto-deploys to production. A `branch` is a private space to commit freely until the work is ready to merge in
 
@@ -272,7 +272,15 @@ Pushes a branch to GitHub for the first time, and the `-u` sets up "tracking" so
 ### git push origin --delete <branch>
 Deletes a branch on GitHub. This is separate from `git branch -d` -- deleting locally does not delete it on GitHub, and vice versa; each side has to be told separately
 
-Test line for Day-008
 ### What's a pull request?
 PR compares tha base of both Branches and is used as a second pair of eyes for review before it lands on MAIN.
 it's used instead of plain merge because there could be other coder's that have to review the actual changes
+
+### Commit message convention: 
+it'll be the title of our commit, has to be precise and let us know exactly what happened there. 
+Rule:  first line ≤50 characters, written in imperative mood (like a command — "add x," not "added x").
+
+### Merge Strategies:
+1. Merge commit — every commit from my branch stays exactly as-is, plus Git adds one new commit that ties the two histories together.
+2. Squash and merge — all commits on my branch get combined into a single new commit on the base branch.
+3. Rebase and merge — My branch's commits get replayed one-by-one directly onto the tip of the base branch, in order, with no merge commit at all. (not practiced yet)
