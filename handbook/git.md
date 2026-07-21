@@ -271,3 +271,8 @@ Pushes a branch to GitHub for the first time, and the `-u` sets up "tracking" so
 
 ### git push origin --delete <branch>
 Deletes a branch on GitHub. This is separate from `git branch -d` -- deleting locally does not delete it on GitHub, and vice versa; each side has to be told separately
+
+Test line for Day-008
+### What's a pull request?
+PR compares tha base of both Branches and is used as a second pair of eyes for review before it lands on MAIN.
+it's used instead of plain merge because there could be other coder's that have to review the actual changes
