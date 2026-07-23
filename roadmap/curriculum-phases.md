@@ -3,6 +3,26 @@
 Reference curriculum for the academy. Adjust pacing based on `progress-tracker.md`, but
 preserve prerequisites and depth — see `CLAUDE.md` for how to teach this, not just what.
 
+## Certifications
+
+AWS certifications are checkpoints inside this curriculum, not a separate track. Each one is
+scheduled after the phase material it covers has already been practiced hands-on — the exam
+should be a review of things Juan has actually done, not the first exposure to them. Do not
+front-load exam prep before the corresponding phase is done; that produces exam-passing without
+durable ability, which conflicts with the goal in `CLAUDE.md`.
+
+- **AWS Cloud Practitioner** — after Phase 5 (Cloud fundamentals). Broad-but-shallow overview
+  exam; low stakes, confirms the Phase 5 concepts landed.
+- **AWS Solutions Architect Associate** — after Phase 7 (Infrastructure as Code). By this point
+  IAM, networking, compute, storage, and high availability have been reinforced by building
+  real infrastructure with Terraform, not just watching services get clicked through a console.
+- **AWS SysOps Administrator Associate** — after Phase 10 (Observability, reliability, and
+  security). Chosen over AWS Developer Associate: SysOps matches the operations/support/DevOps
+  target roles in Phase 12 far more closely than a developer-focused exam does.
+
+Revisit this list if the target roles shift, but don't add exam-prep time that isn't backed by
+a completed phase.
+
 ## Phase 1 — Technical foundations
 
 **Computer and operating-system fundamentals**
@@ -62,6 +82,9 @@ monitoring; logging; security groups/network controls; cost awareness; high avai
 backup/DR concepts. Use the provider's official docs; connect every service to architecture,
 operations, security, troubleshooting, and cost — not just cert trivia.
 
+Certification checkpoint: AWS Cloud Practitioner exam once this phase's material has been
+practiced hands-on (see "Certifications" above).
+
 ## Phase 6 — Containers
 
 Container concepts; images; containers; registries; Dockerfiles; layers; volumes; networks;
@@ -74,6 +97,10 @@ Terraform (or the roadmap's selected tool). Declarative infrastructure; provider
 variables; outputs; state; plan/apply/destroy; modules; remote state; state locking;
 dependencies; workspaces; security/secrets; formatting/validation; testing; drift; team
 workflows. Learn to read provider resource references independently.
+
+Certification checkpoint: AWS Solutions Architect Associate exam once this phase's material has
+been practiced hands-on (see "Certifications" above) — by now IAM, networking, compute,
+storage, and HA from Phase 5 have also been reinforced by building real infrastructure here.
 
 ## Phase 8 — CI/CD and professional Git workflows
 
@@ -96,6 +123,9 @@ Metrics, logs, traces; dashboards; alerts; availability/latency/errors/saturatio
 incident response; root-cause analysis; postmortems; capacity awareness; least privilege;
 secrets management; vulnerability awareness; patch management; network/cloud security basics.
 Use practical failure scenarios and troubleshooting exercises.
+
+Certification checkpoint: AWS SysOps Administrator Associate exam once this phase's material
+has been practiced hands-on (see "Certifications" above).
 
 ## Phase 11 — Portfolio projects
 
