@@ -262,6 +262,38 @@ Brings another branch's commits into my current branch. If my current branch (e.
 
 ### git branch -d <name>
 Deletes a local branch, but only if it's already fully merged (safe default; refuses otherwise)
+Note: `git branch -d` checks whether the branch's commits are reachable from its tracked upstream (or from HEAD if there's no upstream), it never checks against `main` directly.
+
+#### Day 008 PR Practice — why git branch -d didn't warn me
+
+1. Branch creation & push
+
+I created day-008-pr-practice, committed locally
+git push -u origin day-008-pr-practice
+-u sets upstream tracking: local branch ↔ origin/day-008-pr-practice (identical commit history at this point)
+
+2. Squash-merge on GitHub
+
+PR merged via squash → creates one new commit on main
+That new commit has the combined content but no parent link to my branch's original commits
+Git sees my original commits and the new squashed commit as historically unrelated, even though the diff looks the same
+
+3. Local branch delete
+
+git branch -d day-008-pr-practice
+-d asks exactly one question: "are this branch's commits reachable from its own upstream (origin/day-008-pr-practice)?"
+Answer: yes — nothing changed there → Git considers it safe → deletes
+
+4. The actual gap
+
+-d never checks reachability from main
+After a squash-merge, my commits are not reachable from main (main only has the new synthetic commit)
+That check simply isn't part of -d's logic — so no warning, even though this is the case that matters
+
+#### Core Take Away
+-d's safety check answers: "is this preserved on its own upstream?"
+What I actually need answered: "is this preserved on main?"
+Squash-merge is the exact scenario where those two questions diverge — content is preserved, history/reachability is not.
 
 ### git branch -D <name>
 Force-deletes regardless of merge status; can strand commits that are only reachable from that branch (effectively lose them unless you still remember the commit hash)
